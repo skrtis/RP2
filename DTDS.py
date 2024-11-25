@@ -2,20 +2,19 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Load data
 df = pd.read_csv('Data.csv')
 
+# Extract data
 time = np.array(df['Time'].values.tolist())
 cIV = np.array(df['Cocaine Intravenous (ng/mL)'].values.tolist())
-bIV = np.array(df['Benzoylecgonine Intravenous (ng/mL)'].values.tolist())
 cIN = np.array(df['Cocaine Intranasal (ng/mL)'].values.tolist())
-bIN = np.array(df['Benzoylecgonine Intranasal (ng/mL)'].values.tolist())
 cSM = np.array(df['Cocaine Smoked (ng/mL)'].values.tolist())
-bSM = np.array(df['Benzoylecgonine Smoked (ng/mL)'].values.tolist())
 
 cIN_adjusted = cIN[np.argmax(cIN):]
 time_adjusted = time[np.argmax(cIN):]
 
-def cocaine_analysis(time, cocaine_data, route_name):
+def cocaine_exp_analysis(time, cocaine_data, route_name):
     # Reversal and Pre-Processing 
     cocaine_rev = cocaine_data[::-1]
     cocaine2 = cocaine_rev[:-1]
@@ -84,6 +83,3 @@ def cocaine_analysis(time, cocaine_data, route_name):
     ax_rsum[2].bar(time_right, cocaine_right, width=0.03, alpha=0.5, align='edge', edgecolor='k')
 
     plt.show()
-
-
-cocaine_analysis(time_adjusted,cIN_adjusted,'Cut Intranasal')
