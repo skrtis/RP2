@@ -1,4 +1,5 @@
-Time,Cocaine Intravenous (ng/mL),Benzoylecgonine Intravenous (ng/mL),Cocaine Intranasal (ng/mL),Benzoylecgonine Intranasal (ng/mL),Cocaine Smoked (ng/mL),Benzoylecgonine Smoked (ng/mL)
+Time (h),Cocaine Intravenous (ng/mL),Benzoylecgonine Intravenous (ng/mL),Cocaine Intranasal (ng/mL),Benzoylecgonine Intranasal (ng/mL),Cocaine Smoked (ng/mL),Benzoylecgonine Smoked (ng/mL)
+0.000,0.000,0.000,0.000,0.000,0.000,0.000
 0.020,217.830,0.000,7.500,0.000,167.830,0.000
 0.050,194.000,0.000,17.330,0.000,168.330,0.170
 0.080,174.400,2.400,27.170,0.000,153.830,1.170
